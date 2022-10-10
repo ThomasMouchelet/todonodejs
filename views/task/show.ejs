@@ -1,6 +1,8 @@
 <li>
-    <form action="/update">
+    <form action="/update?index=<%= index %>">
         <input type="text" value="<%= task %>" name="taskName">
+        <!-- <input type="text" hidden value="<%= index %>" name="index"> -->
         <input type="submit" value="modifier">
     </form>
+    <a href="/delete?index=<%= index %>">delete</a>
 </li>

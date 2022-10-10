@@ -20,8 +20,15 @@ app.get("/add_task", (req, res) => {
 })
 
 // supprimer une tâche
-
+app.get('/delete', (req, res) => {
+    console.log("delete")
+    const index = req.query.index
+    console.log("index : ", index)
+    taskList.splice(index, 1)
+    res.redirect('/')
+})
 // modifier une tâche
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)

@@ -15,8 +15,11 @@
     </form>
     
     <ul>
-        <% taskList.forEach(function(task){ %>
-            <%- include('task/show', {task: task}); %>
+        <% taskList.forEach(function(task, index){ %>
+            <%- include('task/show', {
+                task: task,
+                index: index
+            }); %>
         <% }); %>
     </ul>
 
